@@ -13,6 +13,107 @@
       body {
         font-family: 'Inter', sans-serif;
       }
+
+      @media print {
+        @page {
+          size: A4;
+          margin: 1.5cm;
+        }
+
+        body {
+          font-size: 11pt;
+          line-height: 1.3;
+          background-color: #fff !important;
+        }
+
+        /* Ensure colors print correctly, especially for charts */
+        * {
+          -webkit-print-color-adjust: exact !important;
+          print-color-adjust: exact !important;
+        }
+
+        /* Layout adjustments for print */
+        .container {
+          padding: 0 !important;
+          margin: 0 !important;
+          max-width: 100% !important;
+        }
+
+        main {
+          width: 100% !important;
+        }
+
+        /* Remove screen-only visual fluff */
+        .shadow-lg, .shadow-md, .shadow-sm {
+          box-shadow: none !important;
+        }
+        .rounded-lg, .rounded, .rounded-xl, .rounded-full {
+          border-radius: 0 !important;
+        }
+        .bg-slate-50, .bg-slate-100 {
+           background-color: #fff !important;
+        }
+        
+        /* Header styling for print */
+        header {
+          border-bottom: 2px solid #ccc !important;
+          padding-bottom: 1rem !important;
+          margin-bottom: 2rem !important;
+        }
+        header img {
+          max-width: 50%;
+          margin: 0 auto;
+          display: block;
+          max-height: 100px;
+          object-fit: contain;
+        }
+
+        /* Page break controls for a professional document flow */
+        #the-challenge, #the-solution, #use-cases, #implementation-considerations, #roi-analysis, #risk-and-compliance, #future-trends, #conclusion, #appendices {
+          break-before: page;
+        }
+
+        h2, h3, h4 {
+          break-after: avoid;
+        }
+
+        /* Keep figures, charts, and tables from splitting across pages */
+        .my-8, .recharts-responsive-container, table {
+          break-inside: avoid;
+        }
+
+        /* Typography adjustments for readability on paper */
+        h2 { /* Was text-3xl */
+          font-size: 22pt !important;
+          margin-top: 0 !important;
+          padding-top: 1rem !important;
+          padding-bottom: 0.5rem !important;
+          margin-bottom: 1rem !important;
+        }
+
+        h3 { /* Was text-2xl */
+          font-size: 16pt !important;
+          margin-top: 2rem !important;
+          margin-bottom: 0.75rem !important;
+        }
+        
+        h4 { /* text-md/lg */
+          font-size: 13pt !important;
+        }
+        
+        /* Make links appear as regular text */
+        a {
+          color: inherit !important;
+          text-decoration: none !important;
+        }
+
+        /* Footer for print */
+        footer {
+          margin-top: 2rem !important;
+          padding-top: 1rem !important;
+          border-top: 1px solid #ccc !important;
+        }
+      }
     </style>
 
   <script type="importmap">
@@ -25,7 +126,7 @@
   }
 }
 </script>
-  <script type="module" crossorigin src="/ai-agent-uc-whitepaper/assets/index-DKkWQvbK.js"></script>
+  <script type="module" crossorigin src="/assets/index-DKkWQvbK.js"></script>
 </head>
   <body>
     <div id="root"></div>
