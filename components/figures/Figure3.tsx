@@ -2,19 +2,19 @@ import React from 'react';
 
 const Layer = ({ title, children }: { title: string, children: React.ReactNode }) => (
   <div className="border-2 border-[#00b9ff] rounded-lg p-4 bg-white text-center w-full">
-    <h5 className="text-sm font-bold tracking-wider uppercase text-[#064a70] mb-4">{title}</h5>
+    <h5 className="text-base font-bold tracking-wider uppercase text-[#064a70] mb-4">{title}</h5>
     {children}
   </div>
 );
 
 const LayerItem = ({ children }: { children: React.ReactNode }) => (
-  <div className="bg-slate-100 p-3 rounded text-xs text-slate-700 h-full flex items-center justify-center">
+  <div className="bg-slate-100 p-3 rounded text-sm text-slate-700 h-full flex items-center justify-center">
     <div>{children}</div>
   </div>
 );
 
 const ArrowDown = () => (
-  <div className="flex justify-center items-center my-2">
+  <div className="flex justify-center items-center my-3">
     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.5 13.5l-5.5 5.5-5.5-5.5" />
     </svg>
@@ -28,7 +28,7 @@ export const Figure3: React.FC = () => {
       <h4 className="text-lg font-bold text-center text-slate-800 mb-6">
         FIGURE 3: AI Agent Technical Architecture
       </h4>
-      <div className="flex flex-col items-center gap-1">
+      <div className="flex flex-col items-center gap-2">
         <Layer title="User Interface Layer">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
             <LayerItem>Dashboard Monitoring</LayerItem>
@@ -62,7 +62,7 @@ export const Figure3: React.FC = () => {
         </Layer>
         <ArrowDown />
         <Layer title="Security & Compliance Layer">
-            <div className="text-xs text-slate-600">
+            <div className="text-sm text-slate-600">
                 <span className="inline-block mx-2">• Encryption</span>
                 <span className="inline-block mx-2">• Audit Logs</span>
                 <span className="inline-block mx-2">• Access Control</span>

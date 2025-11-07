@@ -540,8 +540,8 @@ Fraudsters adapt to new detection methods, requiring continuous model updates. M
       content: [
         'The unemployment verification landscape is at an inflection point. Traditional manual processes are unsustainable in the face of rising fraud, increasing volume, and consumer expectations for instant credit decisions. AI agents offer a proven path forward, delivering measurable improvements in speed, accuracy, cost, and fraud prevention.',
         'Credit bureaus that embrace this technology now will gain significant competitive advantages including enhanced client value propositions, improved operational efficiency, reduced risk exposure, market differentiation, and new revenue opportunities. The question is not whether to adopt AI agents for unemployment verification but how quickly you can implement them to capture these benefits.',
-        `Recommended Next Steps`,
-        `For Executive Leadership:
+        `Recommended Next Steps
+For Executive Leadership:
 1. Commission an internal assessment of current unemployment verification processes and pain points
 2. Establish a cross-functional task force to evaluate AI agent opportunities
 3. Allocate budget for pilot program in 2025 planning cycle

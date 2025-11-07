@@ -14,10 +14,10 @@ export const Figure6: React.FC = () => {
             </h4>
             <div className="grid grid-cols-4">
                 {/* Y-axis labels */}
-                <div className="flex flex-col justify-around text-center font-bold text-sm text-slate-600">
-                    <div className="h-1/3 flex items-center justify-center">HIGH<br/>IMPACT</div>
-                    <div className="h-1/3 flex items-center justify-center">MEDIUM<br/>IMPACT</div>
-                    <div className="h-1/3 flex items-center justify-center">LOW<br/>IMPACT</div>
+                <div className="flex flex-col justify-around text-center font-bold text-xs md:text-sm text-slate-600">
+                    <div className="h-1/3 flex items-center justify-center pr-2">HIGH IMPACT</div>
+                    <div className="h-1/3 flex items-center justify-center pr-2">MEDIUM IMPACT</div>
+                    <div className="h-1/3 flex items-center justify-center pr-2">LOW IMPACT</div>
                 </div>
 
                 {/* Matrix Content */}

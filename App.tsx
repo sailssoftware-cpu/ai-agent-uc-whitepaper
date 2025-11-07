@@ -66,10 +66,13 @@ const App: React.FC = () => {
 
           // Logic for "Recommended Next Steps"
           if (listItems.some(li => li.trim().startsWith('For '))) {
+            const heading = listItems[0].trim();
+            const itemsForGrouping = listItems.slice(1);
+
             const groupedItems: { heading: string, items: string[] }[] = [];
             let currentGroup: { heading: string, items: string[] } | null = null;
 
-            listItems.forEach(li => {
+            itemsForGrouping.forEach(li => {
               const trimmedLi = li.trim();
               if (trimmedLi.startsWith('For ')) {
                 currentGroup = { heading: trimmedLi, items: [] };
@@ -80,20 +83,23 @@ const App: React.FC = () => {
             });
             
             return (
-              <div key={`next-steps-${index}-${partIndex}`} className="my-6">
-                {groupedItems.map((group) => (
-                  <div key={group.heading} className="mb-4">
-                    <h4 className="text-md font-semibold text-[#064a70] mb-3">{group.heading}</h4>
-                    <ul className="space-y-2">
-                      {group.items.map((listItem, itemIndex) => (
-                        <li key={itemIndex} className="flex items-start text-slate-600 leading-relaxed">
-                          <span className="text-[#00b9ff] font-medium w-8 text-left">{listItem.substring(0, 2)}</span>
-                          <span className="flex-1">{listItem.substring(2).trim()}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
+              <div key={`next-steps-wrapper-${index}-${partIndex}`} className="my-8 p-6 sm:p-8 bg-[#00b9ff]/10 border border-[#00b9ff]/30 rounded-lg shadow-sm">
+                <h3 className="text-2xl font-bold text-slate-700 mb-6">{heading}</h3>
+                <div>
+                  {groupedItems.map((group) => (
+                    <div key={group.heading} className="mb-4 last:mb-0">
+                      <h4 className="text-md font-semibold text-[#064a70] mb-3">{group.heading}</h4>
+                      <ul className="space-y-2">
+                        {group.items.map((listItem, itemIndex) => (
+                          <li key={itemIndex} className="flex items-start text-slate-600 leading-relaxed">
+                            <span className="text-[#00b9ff] font-medium w-8 text-left">{listItem.substring(0, 2)}</span>
+                            <span className="flex-1">{listItem.substring(2).trim()}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
               </div>
             );
           }
@@ -109,10 +115,6 @@ const App: React.FC = () => {
                 ))}
               </ul>
             );
-          }
-          
-           if (part.trim() === 'Recommended Next Steps') {
-            return <h3 key={`p-${index}-${partIndex}`} className="text-2xl font-bold text-slate-700 mt-10 mb-0">{part}</h3>
           }
           
           return <p key={`p-${index}-${partIndex}`} className="text-slate-600 leading-relaxed my-4">{part}</p>;
