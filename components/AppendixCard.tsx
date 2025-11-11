@@ -12,7 +12,7 @@ export const AppendixCard: React.FC<AppendixCardProps> = ({ title, icon, childre
     <div className={`bg-white border border-[#00b9ff] rounded-xl shadow-sm p-6 ${className}`}>
       <div className="flex items-center mb-4">
         {icon && <div className="text-[#00b9ff] mr-3">{icon}</div>}
-        <h4 className="text-lg font-bold text-[#064a70]">{title}</h4>
+        <h4 className="text-md font-bold text-[#064a70]">{title}</h4>
       </div>
       <div>
         {children}

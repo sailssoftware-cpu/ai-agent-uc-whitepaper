@@ -11,7 +11,7 @@ export const AppendixC: React.FC = () => {
   return (
     <div className="my-6 grid grid-cols-1 md:grid-cols-2 gap-6">
       <AppendixCard title="Key Terms & Definitions">
-        <ul className="space-y-3 text-base text-slate-600">
+        <ul className="space-y-3 text-sm text-slate-600">
           <Term term="AI Agent" definition="Autonomous software system capable of making decisions and taking actions without human intervention" />
           <Term term="FCRA" definition="Fair Credit Reporting Act – Federal law regulating credit reporting and consumer rights" />
           <Term term="Synthetic Identity" definition="Fraudulent identity created using combination of real and fabricated personal details" />
@@ -19,7 +19,7 @@ export const AppendixC: React.FC = () => {
         </ul>
       </AppendixCard>
       <AppendixCard title="Technical Acronyms">
-        <ul className="space-y-3 text-base text-slate-600">
+        <ul className="space-y-3 text-sm text-slate-600">
             <Term term="NLP" definition="Natural Language Processing – AI technology for understanding human language" />
             <Term term="API" definition="Application Programming Interface – Software interface for system communication" />
             <Term term="KYC" definition="Know Your Customer – Identity verification and due diligence processes" />
